@@ -1,0 +1,239 @@
+.dark_holder
+  width: 100%
+  color: #d6d6d6
+  background: url(../img/dark_bg.jpg) 0 0
+  position: relative
+  box-shadow: 0px 26px 41px 0px rgba(0,0,0,0.3)
+  height: 296vh
+  background-position:  0 100%
+  &.after_scroll
+    background-attachment: fixed
+    background-position:  0 100%
+    .section6
+     position: fixed
+     width: 100vw
+     transform: translate3d(0,30px,0)
+  &.before_scroll
+  	background-attachment: fixed
+  	//background-position-y: -10px
+  	//transition: all 1 linear
+  	.section4
+  	  //position: static
+  	  .bg
+  	    position: fixed
+  	  .texto
+  	    position: fixed    
+  	  .tubique
+  	  	position: fixed	  
+  h3
+  	color: #d6d6d6
+  .section4
+  	//position: fixed
+  	margin-top: 0vh
+  	
+  	//background-attachment: fixed 	
+
+.surface.dark
+  //background: url(../img/dark_bg.jpg)
+  //position: fixed
+  background-size: 100% 100%
+  width: 100vw
+  height: 100vh
+  z-index: 0
+  &.inverted
+    transform: scale(1, -1)
+
+.section4  
+  top: 0px 	
+  .crayons
+    background: url(../img/crayons.png) no-repeat 0% 0%
+    background-size: contain
+    position: absolute	
+    width: 23vw
+   	height: 23vh 
+   	top: 8vh
+   	right: 16vw
+  .tubique
+    background: url(../img/tubique.png) no-repeat 0% 0%
+    background-size: contain
+    position: absolute	
+    width: 14vw
+   	height: 14vh 
+   	top: 65vh
+   	right: 15vw  
+   	z-index: 0  	  
+  .mech
+    background: url(../img/mech.png) no-repeat 0% 0%
+    background-size: contain
+    position: absolute	
+    width: 26vw
+   	height: 26vh 
+   	top: 70vh
+   	left: 21vw   
+  .brush
+    background: url(../img/brush.png) no-repeat 0% 0%
+    background-size: contain
+    position: absolute	
+    width: 21vw
+   	height: 21vh 
+   	top: 80vh
+   	left: 15vw      	   		         
+  .texto
+  	margin-left: 24vw 
+  	margin-top: 28vh
+  	height: auto
+  	display: flex
+  	justify-content: flex-start
+  	flex-direction: column
+  	align-items: flex-start
+  .canvas_holder
+  	width: 85vw
+  	height: 75vh
+  	position: fixed
+  	right: -55vw
+  	top: -10vh
+  	.canvas
+      background: url(../img/canvas.png) no-repeat 0% 0%
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0px
+ 	.shadow
+      background: url(../img/canvas_shadow.png) no-repeat 0px 0px
+      background-size: contain
+      width: 100%
+      height: 100% 	
+      position: absolute
+      top: 0px 
+
+ 
+
+
+.section5     
+  .texto
+  	margin-left: 37vw 
+  	margin-top: 0vh
+  	height: auto
+  	display: flex
+  	justify-content: flex-start
+  	flex-direction: column
+  	align-items: flex-start 
+  .bg
+  	.bucket
+  	  background: url(../img/bucket.png) no-repeat 0% 0%
+  	  background-size: contain
+  	  width: 100%
+  	  height: 100%
+  	  position: absolute	
+  	  width: 26vw
+  	  height: 33vh 
+  	  top: 9vh
+  	  right: 0vw       	          
+  .fullstack_holder
+  	width: 48vw
+  	height: 48vh
+  	position: relative
+  	left: 10vw
+  	bottom: -41vh
+  	max-width: 959px
+  	max-height: 572px
+  	.fullstack
+      background: url(../img/fullstack.png) no-repeat 0% 0%
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute
+ 	.shadow
+      background: url(../img/fullstack_shadow.png) no-repeat 0px 0px
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute 	
+
+
+
+.section6    
+  min-height: 94vh
+  top: 0px 
+  .texto
+  	margin-left: 50vw 
+  	margin-top: -29vh
+  	height: auto
+  	display: flex
+  	justify-content: flex-start
+  	flex-direction: column
+  	align-items: flex-start 
+  	height: 100%
+  	.texts
+  	  margin-left: 10vw
+  	  margin-top: 32vh
+  .bg
+  	.label
+  	  background: url(../img/label.png) no-repeat 0% 0%
+  	  background-size: contain
+  	  width: 100%
+  	  height: 100%
+  	  position: absolute	
+  	  width: 12vw
+  	  height: 12vh 
+  	  top: -35vh
+  	  right: 15vw
+  .cup
+    background: url(../img/cup.png) no-repeat 100% 100%
+    background-size: contain
+    position: absolute
+    left: 28vw
+    bottom: -12vh
+    height: 37vh
+    max-height: 330px
+    width: 31vw
+    max-width: 600px
+    &.mobile
+      display: none  	  
+  .pot_holder
+  	width: 33vw
+  	height: 48vh
+  	position: relative
+  	left: 28vw
+  	bottom: -12vh
+  	max-width: 800px
+  	max-height: 512px
+  	.pot
+      background: url(../img/pot.png) no-repeat 0% 0%
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute
+ 	.shadow
+      background: url(../img/pot_shadow.png) no-repeat 0px 0px
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute        	          
+  .typer_holder
+  	width: 68vw
+  	height: 78vh
+  	position: relative
+  	left: 5vw
+  	bottom: 38vh
+  	max-width: 1400px
+  	max-height: 812px
+  	.typer
+      background: url(../img/typer.png) no-repeat 0% 0%
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute
+ 	.typer_shadow
+      background: url(../img/typer_shadow.png) no-repeat 0px 0px
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute           
+ 	.paper
+      background: url(../img/paper.png) no-repeat 0px 0px
+      background-size: contain
+      width: 100%
+      height: 100%
+      position: absolute       
