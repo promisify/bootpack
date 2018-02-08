@@ -8,6 +8,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
 module.exports = (isProd, options = {}) => {
 	let plugins = [
@@ -33,9 +34,10 @@ module.exports = (isProd, options = {}) => {
 			}
 		}),
 		new HtmlPlugin({
-			title: 'Yo',
+			title: 'Starter',
 			template: join(src,'index.html')
 		}),
+        new HtmlWebpackInlineSVGPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendors',
 			minChunks: function (module) {
