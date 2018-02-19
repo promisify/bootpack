@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import TweenLite from 'gsap'; //GreenSock
 //import bootstrap from 'bootstrap';
 //import hamburgers from 'hamburgers';
 //import fullpage from 'fullpage.js';
@@ -131,7 +132,9 @@ $(document).ready(function($) {
 
 	$('.hamburger').on('click', function(){
 		this.classList.toggle("is-active");
-	})
+	});
+	
+	TweenLite.from(diri, 1.2, {autoAlpha: 0, y: 40,  ease: Back.easeOut.config( 1.7), delay: 0.3});
 
 	resizing();
 	window.onresize = function(event) { resizing(); } 
