@@ -4,7 +4,7 @@ const ExtractText = require('extract-text-webpack-plugin');
 
 
 const extractTextMain = new ExtractText({
-	filename: 'scss/style.scss',
+	filename: 'style.css',
 	allChunks: true
 });
 const extractTextVendors = new ExtractText({
@@ -66,9 +66,9 @@ module.exports = env => {
 				}]
 			},
 			{
-				test: /\.(gif|png|jpg)$/,
+				test: /\.(gif|png|jpg|jpeg)$/,
 				use: isProd
-				? 'file-loader?context=src/static/&name=[path][name].[ext]&outputPath=../../tmp/'
+				? 'file-loader?context=src/static/&name=[path][name].[ext]&outputPath=dist/'
 				: 'file-loader'
 			},
 

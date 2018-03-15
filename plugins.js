@@ -11,6 +11,7 @@ const HtmlPlugin = require('html-webpack-plugin')
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 //const ManifestPlugin = require('webpack-manifest-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const renameOutputPlugin = require('rename-output-webpack-plugin');
 
 let pathsToClean = [
 'dist',
@@ -50,7 +51,7 @@ module.exports = (isProd, options = {}) => {
 		}),
 		new HtmlPlugin({
 			title: 'Bootpack',
-		
+
 			template: join(src,'index.html')
 		}),
 		/*new ManifestPlugin({
@@ -64,7 +65,7 @@ module.exports = (isProd, options = {}) => {
 		    name: 'Bootpack',
 		    short_name: 'Bootpack',
 		    filename: "manifest.json",
-		    description: 'Boilerplate for landing pages',
+		    description: 'Boilerplate for landing page',
 		    background_color: '#eeeeee',
 		    inject: true,
   fingerprints: true,
@@ -75,6 +76,7 @@ module.exports = (isProd, options = {}) => {
 		      }
 		    ]
 		  }),
+		
 		new HtmlWebpackInlineSVGPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendors',
@@ -88,6 +90,10 @@ module.exports = (isProd, options = {}) => {
 			plugins.push(
 				new CleanPlugin(pathsToClean, cleanOptions),
 				new CopyPlugin([{ context: 'src/static', from: '**/*.*', to: dist }]),
+				/*new renameOutputPlugin({
+		            'style.scss': 'style.css',
+		            
+		        }),*/
 				new webpack.LoaderOptionsPlugin({ minimize: true, debug: true }),
 				new webpack.optimize.UglifyJsPlugin({
 					output: {
