@@ -8,8 +8,7 @@
     "dev": "webpack-dev-server --env.development",
     "build": "webpack --env.production",
     "start": "npm run dev",
-    "locally": "webpack-dev-server --env.development --host 192.168.0.16",
-     "postinstall": "npm install --dev"
+    "locally": "webpack-dev-server --env.development --host 192.168.0.16"
   },
   "author": "One",
   "keywords": [
