@@ -1,5 +1,19 @@
-# Webpack2-starter-kit upgraded
-# Bootstrap and jQuery included
+# Boilerplate for landing webpage
+
+
+v0.5
+Heroku-friendly, Build-friendly, Favicons, Fontawesome, Hamburger.css
+
+v0.3
+Greensock, Snap, vivus, SVG inliner
+
+
+v0.1
+Bootstrap + jQuery + Hero header
+
+
+
+# Webpack2-starter-kit [as a base]
 
 A simple starterkit for front end development using Webpack2, ES6 (babel) and Sass
 
